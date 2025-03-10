@@ -1,0 +1,55 @@
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: white;
+    color: #4d96ff;
+    padding: 10px 0;
+    height: 70px;
+    position: relative; /* Ya NO es fixed */
+    margin: 20px 0;
+  }
+  
+  .marquee-text-wrapper {
+    display: flex;
+    animation: scroll 200s linear infinite;
+    width: max-content; /* Esto es importante para que el contenido no "salte" */
+  }
+
+  .marquee-text-wrapper2 {
+    display: flex;
+    animation: scroll 300s linear infinite;
+    width: max-content; /* Esto es importante para que el contenido no "salte" */
+  }
+  .marquee-text-wrapper .marquee-text {
+    flex-shrink: 0; /* Evita que se encoja */
+  }
+  /* Añadir duplicación explícita del contenido */
+.marquee-text-wrapper .marquee-text:nth-child(2) {
+    margin-left: 10px; /* Ajuste entre el texto repetido y el original */
+  }
+  
+  .marquee-text {
+    display: inline-flex; /* Cambié inline-block a inline-flex para incluir imágenes dentro del texto */
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 70px;
+  }
+  
+  .hosted-image {
+    width: auto;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  /* Nueva animación para el scroll infinito */
+  @keyframes scroll {
+    0% {
+        transform: translateX(0%); /* Empieza justo en la pantalla */
+    }
+    100% {
+      transform: translateX(-100%); /* Llega al final del contenedor (a la izquierda) */
+    }
+  }
+  

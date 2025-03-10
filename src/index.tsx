@@ -4,10 +4,10 @@ import { BrowserRouter } from 'react-router-dom';
 import { StrictMode } from 'react';
 
 // Local imports
-import App from './app';
 import initI18n from './lang';
 import reportWebVitals from './util/web-vitals';
 import './styles/main.scss';
+import { App } from './app';
 
 // Global initialization
 initI18n();

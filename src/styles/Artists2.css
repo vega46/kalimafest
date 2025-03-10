@@ -1,0 +1,98 @@
+.artist-name {
+    color: white;
+    font-size: 3rem; /* Aumenta el tamaño de la fuente */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .artist-names-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; /* Centra los nombres en cada celda */
+  }
+  
+  .artist-title {
+    text-align: center;
+    color: white;
+    font-size: 3rem; /* Aumenta el tamaño de fuente */
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 20px 0; /* Espaciado arriba y abajo */
+  }
+  
+  .artist-name:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+  }
+  
+  .blurred {
+  
+    filter: blur(15px);
+  
+    color: white;
+  
+  }
+  
+  .artist-images-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Siempre 3 imágenes por fila */
+    gap: 40px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .artist-card {
+    position: relative;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    width: 320px;
+    padding-bottom: 10px;
+    z-index: 1; /* Encima de la sombra */
+  }
+  
+  .artist-images-container {
+    display: flex;
+    justify-content: center; /* Centra el grid en la pantalla */
+    width: 100%;
+  }
+  .artist-image {
+    width: 100%;
+    height: 350px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .artist-image:hover {
+    transform: scale(1.1);
+  }
+  
+  .artist-name2 {
+    color: #4d96ff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+  }
+
+  .artist-shadow {
+    position: absolute;
+    top: 10px; /* Desplaza la sombra */
+    left: 10px;
+    width: 300px;
+    height: 500px;
+    background-color: black;
+    border-radius: 8px;
+    z-index: 0; /* Debajo de la tarjeta */
+  }

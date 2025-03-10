@@ -1,0 +1,27 @@
+/* CSS para el Popup */
+.custom-popup .leaflet-popup-content {
+    font-size: 20px; /* Aumenta el tamaño de la fuente general */
+    font-weight:lighter;  /* Hace el texto más grueso */
+    color: 'black';  /* Cambia el color del texto a blanco */
+    text-align: center; /* Centra todo el contenido dentro del popup */
+  }
+  
+  .custom-popup .leaflet-popup-content a {
+    font-size: 20px !important; /* Aumenta el tamaño de la fuente para el enlace */
+    font-weight: bold;
+    color: #4d96ff !important; /* Color azul para el enlace */
+    text-decoration: underline; /* Subraya el enlace */
+    display: block; /* Hace que el enlace sea un bloque para que ocupe toda la línea */
+    margin-top: 10px; /* Añade un pequeño margen superior */
+  }
+  
+  .custom-popup {
+    width: auto ; /* Ajusta el ancho del popup */
+    text-align: center; /* Asegura que el texto se centre horizontalmente */
+  }
+  
+  .custom-popup .leaflet-popup-content span {
+    display: block; /* Asegura que todo el contenido dentro de la popup esté en bloque */
+    font-size: 20px; /* Aumenta el tamaño de la fuente */
+  }
+  

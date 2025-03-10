@@ -1,0 +1,37 @@
+/* FAQS.css */
+
+/* Estilo para el título */
+.faq-title {
+    text-align: center;
+    color: white;
+    font-style: normal;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para los acordeones (las preguntas) */
+  .faq-accordion {
+    background-color: #4d96ff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para las preguntas dentro del acordeón */
+  .faq-accordion .MuiAccordionSummary-root {
+    background-color: #4d96ff; /* Fondo azul */
+    color: white; /* Texto blanco */
+  }
+  
+  .faq-accordion .MuiAccordionSummary-root:hover {
+    background-color: #3578e5; /* Color al hacer hover */
+  }
+  
+  /* Estilo para el contenido del acordeón */
+  .faq-accordion .MuiAccordionDetails-root {
+    background-color: #4d96ff; /* Fondo azul */
+    color: white; /* Texto blanco */
+  }
+  
+  .faq-accordion .MuiAccordionSummary-content {
+    font-weight: bold;
+  }
+  
