@@ -1,58 +1,141 @@
+/* Contenedor de tarjetas de tickets */
+
+@font-face {
+  font-family: "Exo Black";
+  src: url("../styles/font/Exo/Exo-Black.otf") format("opentype"); /* Ajusta la ruta si es necesario */
+  font-weight: 300;
+  font-style: normal;
+}
+
 .ticket-cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    padding: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+/* Tarjetas de tickets */
+.ticket-card {
+  background: white;
+  border: 1.3vw solid #4d96ff;
+  text-align: center;
+  width: 20vw;
+  border-radius: 1vw;
+  height: 28vh;
+  font-size: 1.7vw;
+  margin-bottom: 3vh;
+}
+
+/* Estilo para el título dentro de las tarjetas de tickets */
+.ticket-card h3 {
+  margin-top: 3.5vh; /* Elimina márgenes */
+  color: #f88e1b; /* Color del texto */
+  font-size: 1.5rem; 
+  letter-spacing: 1rem;/* Tamaño de la fuente */
+  font-weight: normal; /* Peso de la fuente */
+  letter-spacing: 0px;
+  border-radius: 5px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Espacio debajo del título */
+  text-align: center; /* Centrado */
+}
+
+/* Precio de la tarjeta */
+.price {
+  font-size: 5vw;
+  margin-top: 1vh;
+  font-weight: bolder;
+  color: #4d96ff;
+}
+
+/* Siguiente precio (con borde) */
+.next-price {
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+  background: #deeee7;
+  display: flex;
+  font-weight: bold;
+  margin-top: -8vh;
+  border-radius: 1.5vw;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #4d96ff;
+  font-size: 1.4rem;
+}
+
+/* Botón de compra */
+.buy-button {
+  height: 5vh;
+  background: #f88e1b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: inherit;
+  width: 80%;
+  border-radius: 3vw;
+  margin-top: 1vh;
+  font-size: 1.5vw;
+}
+
+/* Hover del botón de compra */
+.buy-button:hover {
+  background: darkblue;
+}
+
+/* Ajuste para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+  .ticket-cards-container {
+    gap: 3vw;
+    padding: 3vh 4vw;
   }
-  
+
   .ticket-card {
-    background: white;
-    border: 2px solid #4d96ff;
-    padding: 5px;
-    text-align: center;
-    width: 450px;
-    border-radius: 10px;
-    height: 460px;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 25px;
+    width: 40vw;
+    height: 22vh;
+    font-size: 1.9vw;
   }
-  
+
   .price {
-    font-size: 130px;
-    margin-top: 30px;
-    font-weight: bolder;
-    color: #4d96ff;
+    font-size: 7vw;
+    margin-top: 0vh;
   }
-  
+
   .next-price {
-    border: 1px solid #4d96ff;
-    height: 70px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-style: italic;
-    margin-top: -120px;
-    border-radius: 15px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 3.5vh;
+    margin-top: -9vh;
   }
-  
+
   .buy-button {
-    height: 70px;
-    background: #4d96ff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    width: 80%;
-    border-radius: 35px;
-    margin-top: 10px;
-    font-size: 20px;
+    font-size: 2vw;
   }
-  
-  .buy-button:hover {
-    background: darkh;
+}
+
+/* Ajuste para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .ticket-cards-container {
+    gap: 4vw;
+    padding: 4vh 3vw;
   }
-  
+
+  .ticket-card {
+    width: 70vw;
+    height: 41vh;
+    font-size: 4.5vw;
+    padding: 1;
+  }
+
+  .price {
+    font-size: 19vw;
+  }
+
+  .next-price {
+    height: 5vh;
+  }
+
+  .buy-button {
+    font-size: 4vw;
+    margin-top: 2vh;
+  }
+}

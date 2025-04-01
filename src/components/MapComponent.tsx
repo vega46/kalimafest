@@ -31,7 +31,7 @@ const MapComponent = () => {
         height: '400px',
         width: '100%',
         margin: '0 auto',  // Centra el mapa horizontalmente
-        marginTop: '50px',
+        marginTop: '10px',
         borderRadius: '100px',  // Redondea las esquinas del mapa
         boxSizing: 'border-box'  // Asegura que el borde no afecte el tamaño
       }}
@@ -44,7 +44,7 @@ const MapComponent = () => {
           <Popup 
             className="custom-popup"
           >
-            <span>📍 <strong>Kalima Fest </strong><br />  Granada, Complejo Embrujo  <br />
+            <span>📍 <strong>Kalima Fest </strong><br /> Granada, Complejo Embrujo <br />
             <a
               href={`https://www.google.com/maps?q=${festivalLocation.lat},${festivalLocation.lng}`}
               target='_blank'

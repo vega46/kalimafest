@@ -1,55 +1,123 @@
 .marquee-container {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    background-color: white;
-    color: #4d96ff;
-    padding: 10px 0;
-    height: 70px;
-    position: relative; /* Ya NO es fixed */
-    margin: 20px 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #deeee7;
+  color: #4d96ff;
+  margin-top: 10.9vh;
+  height: 8vh;
+  position: relative;
+}
+
+.marquee-container2 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #deeee7;
+  color: #4d96ff;
+  margin-top: 1vh;
+  height: 8vh;
+  position: relative;
+}
+
+.marquee-text-wrapper {
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  animation: scroll 200s linear infinite;
+  width: max-content; /* Esto es importante para que el contenido no "salte" */
+}
+
+.marquee-text-wrapper2 {
+  display: flex;
+  animation: scroll 300s linear infinite;
+  gap: 0;
+  width: max-content;
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+.marquee-text-wrapper .marquee-text {
+  flex-shrink: 0;
+}
+
+.marquee-text {
+  display: inline-flex;
+  font-size: 2rem; /* Escalable en todos los dispositivos */
+  font-weight: 600;
+  margin-left: 1rem;
+  line-height: 8vh; /* Asegura que el texto ocupe el centro de la barra */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+.hosted-image {
+  width: auto;
+  height: 3vh;
+}
+
+/* Animación responsiva */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
   }
-  
-  .marquee-text-wrapper {
-    display: flex;
-    animation: scroll 200s linear infinite;
-    width: max-content; /* Esto es importante para que el contenido no "salte" */
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Media queries para diferentes pantallas */
+
+/* Móviles estándar */
+@media (max-width: 480px) {
+  .marquee-container {
+    height: 4vh;
   }
 
-  .marquee-text-wrapper2 {
-    display: flex;
-    animation: scroll 300s linear infinite;
-    width: max-content; /* Esto es importante para que el contenido no "salte" */
-  }
-  .marquee-text-wrapper .marquee-text {
-    flex-shrink: 0; /* Evita que se encoja */
-  }
-  /* Añadir duplicación explícita del contenido */
-.marquee-text-wrapper .marquee-text:nth-child(2) {
-    margin-left: 10px; /* Ajuste entre el texto repetido y el original */
-  }
-  
   .marquee-text {
-    display: inline-flex; /* Cambié inline-block a inline-flex para incluir imágenes dentro del texto */
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 70px;
+    font-size: 1.5rem;
   }
-  
+
   .hosted-image {
-    width: auto;
-    height: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
+    height: 3vh;
+    width: 10vw;
   }
-  
-  /* Nueva animación para el scroll infinito */
-  @keyframes scroll {
-    0% {
-        transform: translateX(0%); /* Empieza justo en la pantalla */
-    }
-    100% {
-      transform: translateX(-100%); /* Llega al final del contenedor (a la izquierda) */
-    }
+}
+
+/* Móviles grandes y tablets */
+@media (max-width: 768px) {
+  .marquee-container {
+    height: 8vh;
   }
-  
+
+  .marquee-text {
+    font-size: 1.8rem;
+  }
+
+  .hosted-image {
+    height: 4.5vh;
+    width: 14.8vw;
+    margin-bottom: 0.4vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+
+  .hosted-image2 {
+    height: 3.2vh;
+    width: 19vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+   }
+}
+
+/* Ordenadores */
+@media (min-width: 1024px) {
+  .marquee-container {
+    height: 10vh;
+  }
+
+  .marquee-text {
+    font-size: 2.2rem;
+  }
+
+  .hosted-image {
+    height: 5vh;
+  }
+}

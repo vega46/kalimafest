@@ -1,135 +1,74 @@
-// External imports
-@import "@fontsource/roboto/300.css";
-@import "@fontsource/roboto/400.css";
-@import "@fontsource/roboto/500.css";
-@import "@fontsource/roboto/700.css";
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
 
-// Local imports
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 body {
-    background-color:#4d96ff ;
-    margin: 0;
-    font-family: "Questrial", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  #root {
-    min-height: 100vh;
-  }
-  
-  /* Contenedor general para centrar todo */
-.page-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #4d96ff;
+  font-family: "Exo Black", sans-serif;
+  font-weight: 400;
+  max-width: 100vw !important;
+  width: 100vw;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background-container {
   width: 100%;
+  min-width: 100%;
+  top: 0; /* Elimina cualquier margen */
+  padding: 0; /* Elimina cualquier relleno */
+  height: auto;
+  min-height: 100%;
+  background: url("../assets/fondoweb.png") no-repeat center top;
+  position: absolute; /* Asegura que se expanda sin restricciones */
+  z-index: -1; /* Asegura que esté detrás del contenido */
 }
 
-/* Modificar marquee para que no sea fijo */
-.marquee-container {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: white;
-  color: #4d96ff;
-  padding: 10px 0;
-  height: 90px;
-  position: relative; /* Ya no es fixed */
-  margin-top: 20px; /* Ajusta según necesites */
+* {
+  box-sizing: border-box;
 }
 
-.marquee-text-wrapper {
-  display: flex;
-  animation: scroll 15s linear infinite;
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* 1rem = 14px para pantallas pequeñas */
+  }
 }
 
-.marquee-text {
-  display: inline-block;
-  font-size: 30px;
-  font-weight: bolder;
-  line-height: 80px;
-  padding-right: 90px;
+@media (max-width: 480px) {
+  html {
+    font-size: 12px; /* 1rem = 12px para pantallas muy pequeñas */
+  }
 }
 
-/* Título "Descubre a los artistas" centrado y blanco */
+a {
+  border: none;
+  display: inline-block; /* Para que la imagen se ajuste como un bloque de línea */
+  border: none; /* Elimina cualquier borde */
+  padding: 0; /* Elimina cualquier relleno */
+}
+
+
+
+@font-face {
+  font-family: "Exo Black";
+  src: url("../styles/font/Exo/Exo-Black.otf") format("opentype"); /* Ajusta la ruta si es necesario */
+  font-weight: 900;
+  font-style: normal;
+}
+
 .discover-title {
   text-align: center;
   color: white;
   font-size: 2rem;
   margin: 40px 0;
 }
-
-/* Contenedor de artistas centrado */
-.artist-images-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.artist-images-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 900px;
-  width: 100%;
-  justify-content: center;
-  padding: 20px;
-}
-
-.artist-card {
-  position: relative;
-  text-align: center;
-  background: #000;
-  border-radius: 10px;
-  padding-bottom: 10px;
-}
-
-.artist-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-
-.artist-image:hover {
-  transform: scale(1.1);
-}
-
-.artist-name {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px;
-}
-/* TabBar.css */
-
-/* Estilos generales para la barra */
-.tabbar-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  z-index: 1000;
-  background-color: #4d96ff; /* Fondo azul */
-  box-shadow: none;
-  padding: 0 16px;
-  min-height: 80px;
-}
-
-/* Logo en la barra */
-.tabbar-logo {
-  height: 100px;
-  margin-right: auto;
-  margin-left: 16px;
-  margin-bottom: 16px;
-  margin-top: 16px;
-}
-
 /* Barra de navegación */
 .bottom-nav {
   display: flex;
@@ -150,35 +89,75 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Cuando la opción está seleccionada */
-.bottom-nav-action.selected {
-  color: #ffff00; /* Color amarillo cuando está seleccionada */
-}
-
 /* Cuando la opción no está seleccionada */
 .bottom-nav-action:hover {
   color: #4d96ff;
 }
 
 #logos {
-  margin: 50px 0;
   text-align: center;
 }
 
 .logos-container {
+  position: relative; /* Para usar ::before */
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 300px;
+  overflow: hidden; /* Evita desplazamiento horizontal */
+  flex-direction: column;
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Centra las imágenes verticalmente */
+  flex-wrap: nowrap; /* Asegura que todo esté en una fila única */
+  height: 150px; /* Ajusta la altura del contenedor según sea necesario */
+  gap: 7px; /* Añade espacio entre los logos */
+  padding: 10px; /* Espaciado interno para centrar correctamente */
+  overflow: hidden; /* Evita el scroll horizontal y oculta contenido extra */
 }
 
-.logo {
-  width: 100px;
+.logos-container::before {
+  content: ""; /* Pseudo-elemento vacío para la imagen de fondo */
+  position: absolute; /* Hace que cubra todo el contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/fondor.png") no-repeat center bottom;
+  z-index: -1; /* Ubica el fondo detrás del contenido */
+}
+
+.logos-row {
+  display: flex; /* Cada fila es un flex row */
+  justify-content: center; /* Centra los elementos dentro del row */
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 10px; /* Espaciado entre los logos dentro de cada fila */
+}
+
+.partner {
+  width: 20vw; /* Ajusta el tamaño de los logos */
   height: auto;
-  margin: 10px;
+  z-index: 1; /* Asegura que los logos estén encima del fondo */
+}
+
+.partner2 {
+  width: 30vw; /* Ajusta el tamaño de los logos */
+  height: auto;
+  z-index: 1; /* Asegura que los logos estén encima del fondo */
+}
+
+.partner {
+  margin-right: 8vw; /* Margen derecho para separar */
+}
+
+.partner:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
+
+
+.logo {
+  width: 165px;
+  height: auto;
   object-fit: contain;
 }
+
 
 @media (max-width: 768px) {
   .logos-container {

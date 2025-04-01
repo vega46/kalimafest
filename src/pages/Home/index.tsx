@@ -1,224 +1,69 @@
-import "../../styles/Marquee2.css";
-import "../../styles/Tickets.css";
-import { Artists } from "../../components/ArtistComponent2";
-import logo from "../../assets/logo.png";
-import jhonp from "../../assets/jhonp.jpeg";
-import juicy from "../../assets/juicy.jpg";
-import MVRK from "../../assets/MVRK.png";
-import diso from "../../assets/diso.jpeg";
-import fourvenues from "../../assets/fourvenues.png";
+import vera from "../../assets/artistas/vera.png";
+import bug from "../../assets/artistas/bug.png";
+import pepa from "../../assets/artistas/pepa.png";
+import MVRK from "../../assets/artistas/MVRK.png";
+import DISOBEY from "../../assets/artistas/DISOBEY.png";
+import Artist from "../../assets/artistas/Artist.png";
 
 import MapComponent from "../../components/MapComponent";
+import MarqueeComponent from "../../components/MarqueeComponent";
+import MarqueeComponent2 from "../../components/MarqueeComponent2";
+
+import { Artists } from "../../components/ArtistComponent2";
+import { TicketsComponent } from "../../components/TicketsComponent";
+import { PartnerComponent } from "../../components/PartnerComponent";
 
 const Home = () => {
   const artists = [
-    { name: "MVRK", revealed: true, image: MVRK, url: "" },
-    { name: "DISOBEY", revealed: true, image: diso, url: "" },
-    { name: "?", revealed: false, image: logo, url: "" },
-    { name: "JUICY BAE", revealed: true, image: juicy, url: "" },
-    { name: "?", revealed: false, image: logo, url: "" },
-    { name: "?", revealed: true, image: logo, url: "" },
     {
-      name: "JOHN POLLÓN",
-      revealed: true,
-      image: jhonp,
-      url: "https://open.spotify.com/intl-es/artist/4tPyn1bQTAqAb7Ek5OorKH",
+      image: MVRK,
+      url: "https://open.spotify.com/intl-es/artist/6WCTfR8dIuTqWrFrzt2yl0?si=gXzOfDYITVCqh0aZwPVfGA",
     },
-    { name: "?", revealed: false, image: logo, url: "" },
-    { name: "?", revealed: false, image: logo, url: "" },
+    {
+      image: DISOBEY,
+      url: "https://open.spotify.com/intl-es/artist/5kJ11J2oaWbK7kRjAKcgNC?si=5lL6t3LRQd2IUz1yk2ZQdA",
+    },
+    {
+      image: bug,
+      url: "https://open.spotify.com/intl-es/artist/6o4L5N0aiAhdtN3pqEwG0P?si=vst8mi5wQWiUag7EZZyLBA",
+    },
+    {
+      image: vera,
+      url: "https://open.spotify.com/intl-es/artist/03ibrSvByQ6WCX79oFaORa?si=D2jdQ2ltS4q8BLS5ia7XXg",
+    },
+    {
+      image: pepa,
+      url: "https://www.instagram.com/casa__pepa/?hl=es",
+    },
   ];
 
   return (
-    <div>
+    <>
       <section id="home">
-        <div className="marquee-container">
-          <div className="marquee-text-wrapper">
-            <div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div>
-            <div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div><div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div><div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div><div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div><div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div><div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div><div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div><div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div><div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div><div className="marquee-text">
-              ¡ENTRADAS YA A LA VENTA PARA EL FESTIVAL KALIMA FEST! | GRANADA -
-              10 MAYO 2025 | COMPLEJO EMBRUJO | HOSTED BY
-              <img src={logo} alt="Imagen 1" className="hosted-image" />
-              X
-              <img src={logo} alt="Imagen 2" className="hosted-image" />
-            </div>
-          </div>
-        </div>
+        <MarqueeComponent />
       </section>
 
-      <Artists artists={artists} />
+      <div className="background-container">
+        <img src={Artist} className="artist-lineup" />
 
-      <section id="tickets">
-        <div className="marquee-container">
-          <div className="marquee-text-wrapper2">
-            <div className="marquee-text">
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS
-              ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS LIMITADAS ENTRADAS
-              LIMITADAS
-            </div>
-            <div className="marquee-text"></div>
-          </div>
-        </div>
+        <section id="lineup">
+          <Artists artists={artists} />
+        </section>
 
-        <div className="ticket-cards-container">
-          <div className="ticket-card">
-            <h3>
-              <br></br>Entrada al festival
-            </h3>
-            <p className="price">20€</p>
-            <div className="next-price">Próximo precio: 35€</div>
-            <button
-              className="buy-button"
-              onClick={() =>
-                (window.location.href =
-                  "https://www.fourvenues.com/fr/kalima-fest/events/kalima-fest--10-05-2025-IU5F")
-              }
-            >
-              Comprar entrada
-            </button>
-          </div>
+        <section id="tickets">
+          <MarqueeComponent2 />
+          <TicketsComponent />
+        </section>
 
-          <div className="ticket-card">
-            <h3>
-              <br></br>Pulsera de reacceso
-            </h3>
-            <p className="price">5€</p>
-            <div className="next-price">En taquilla: 15€</div>
-            <button
-              className="buy-button"
-              onClick={() =>
-                (window.location.href =
-                  "https://www.fourvenues.com/fr/kalima-fest/events/kalima-fest--10-05-2025-IU5F")
-              }
-            >
-              Comprar pulsera
-            </button>
-          </div>
+        <section id="mapa">
+          <MapComponent />
+        </section>
 
-          <div className="ticket-card">
-            <h3>
-              <br></br>Billete autobus{" "}
-            </h3>
-            <p className="price">5€</p>
-            <div className="next-price">Solo en página web</div>
-            <button
-              className="buy-button"
-              onClick={() =>
-                (window.location.href =
-                  "https://www.fourvenues.com/fr/kalima-fest/events/kalima-fest--10-05-2025-IU5F")
-              }
-            >
-              Comprar billete
-            </button>
-          </div>
-
-          <div className="ticket-card">
-            <h3>
-              <br></br>Cambio de nombre{" "}
-            </h3>
-            <p className="price">4€</p>
-            <div className="next-price">Solo hasta el 9 de Mayo</div>
-            <button
-              className="buy-button"
-              onClick={() =>
-                (window.location.href =
-                  "https://www.fourvenues.com/fr/kalima-fest/events/kalima-fest--10-05-2025-IU5F")
-              }
-            >
-              Cambiar nombre
-            </button>
-          </div>
-        </div>
-      </section>
-      <section id="map"></section>
-
-      <MapComponent />
-
-      <div className="logos-container">
-        <img src={logo} alt="MVRK" className="logo" />
-        <img src={logo} alt="DISOBEY" className="logo" />
-        <img src={logo} alt="JUICY BAE" className="logo" />
-        <img src={fourvenues} alt="JOHN POLLÓN" className="logo" />
+        <section id="terminos">
+          <PartnerComponent />
+        </section>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,98 +1,128 @@
-.artist-name {
-    color: white;
-    font-size: 3rem; /* Aumenta el tamaño de la fuente */
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .artist-names-container {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-    justify-items: center; /* Centra los nombres en cada celda */
-  }
-  
-  .artist-title {
-    text-align: center;
-    color: white;
-    font-size: 3rem; /* Aumenta el tamaño de fuente */
-    font-weight: bold;
-    font-style: normal;
-    text-transform: uppercase;
-    margin: 20px 0; /* Espaciado arriba y abajo */
-  }
-  
-  .artist-name:hover {
-    transition: transform 0.3s ease-in-out;
-    transform: scale(1.1);
-  }
-  
-  .blurred {
-  
-    filter: blur(15px);
-  
-    color: white;
-  
-  }
-  
+
+.artist-lineup {
+  display: flex;
+  align-items: center;     
+  justify-content: center; 
+  width: 100%;             
+  margin: 0 auto;          
+  padding: 0;      
+  top: 0; 
+}
+
+.artist-title {
+  text-align: center;
+  color: white;
+  font-size: 5rem; 
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* Envuelve todo el grid y lo centra en la pantalla */
+.artists-grid-wrapper {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: 100vw; /* Ocupa todo el ancho */
+}
+
+.artist-image {
+  width: 130%; /* Ajusta el tamaño */
+  height: auto;
+  object-fit: cover; /* Asegura proporción */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Sigue aplicando efectos hover */
+}
+
+.artist-image:hover {
+  transform: scale(1.1);
+}
+
+
+/* Clase inicial para ocultar las imágenes */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Desplazamiento significativo hacia abajo */
+  transition: opacity 3s ease-in, transform 3s ease-in; /* Incrementamos la duración a 3 segundos */
+}
+
+/* Clase que se aplica cuando el elemento es visible */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Retorna a su posición original */
+}
+
+
+
+/* Estilo general del contenedor de la grid */
+.artist-images-container {
+  max-width: 1200px; /* Limita el ancho máximo del grid */
+  padding: 20px;
+}
+
+
+/* Ajuste para pantallas medianas */
+@media (max-width: 768px) {
+
+  .artist-images-container,
   .artist-images-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Siempre 3 imágenes por fila */
-    gap: 40px;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .artist-card {
-    position: relative;
-    text-align: center;
-    background: white;
-    border-radius: 10px;
-    width: 320px;
-    padding-bottom: 10px;
-    z-index: 1; /* Encima de la sombra */
-  }
-  
-  .artist-images-container {
-    display: flex;
-    justify-content: center; /* Centra el grid en la pantalla */
-    width: 100%;
-  }
-  .artist-image {
-    width: 100%;
-    height: 350px; /* Altura fija para uniformidad */
-    object-fit: cover; /* Ajusta la imagen sin deformarla */
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .artist-image:hover {
-    transform: scale(1.1);
-  }
-  
-  .artist-name2 {
-    color: #4d96ff;
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px;
+    padding: 0; /* Elimina relleno */
+    border: none; /* Elimina bordes */
   }
 
-  .artist-shadow {
-    position: absolute;
-    top: 10px; /* Desplaza la sombra */
-    left: 10px;
-    width: 300px;
-    height: 500px;
-    background-color: black;
-    border-radius: 8px;
-    z-index: 0; /* Debajo de la tarjeta */
+  .artist-title {
+    font-size: 2rem;
   }
+
+  .artist-images-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+  }
+
+  .artist-lineup {
+    height: auto;
+    object-fit: cover;
+  }
+
+  .artist-image {
+    width: 100%; /* Asegura que la imagen ocupe el 100% */
+    height: auto;
+  }
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 480px) {
+
+  .artist-lineup {
+    height: auto;
+    object-fit: cover;
+    margin-top: 22vh;
+  }
+
+  .artist-images-container {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .artist-title {
+    font-size: 2rem;
+    margin-top: 22vh;
+  }
+
+  .artist-images-grid {
+    display: grid;
+    gap: 16px;
+    margin-top: 5vh;
+
+  }
+
+  .artist-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+
+}
