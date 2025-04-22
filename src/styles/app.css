@@ -1,0 +1,19 @@
+/* Estilos globales opcionales */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Tipografía global (ejemplo usando Roboto como en Material UI) */
+  }
+  
+  /* Contenedor principal de contenido de la app */
+  .content {
+    flex: 1;
+    /* Otros estilos generales de .content podrían ir aquí */
+  }
+  
+  /* Estilos específicos para móviles (max-width: 480px) */
+  @media (max-width: 480px) {
+    .content {
+      padding-bottom: 56px; /* Espacio inferior para que el contenido no quede oculto detrás de la barra TabBar */
+    }
+  }
+  

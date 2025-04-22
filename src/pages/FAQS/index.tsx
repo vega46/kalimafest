@@ -2,12 +2,19 @@ import React from 'react';
 import { Accordion, AccordionSummary, AccordionDetails, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import '../../styles/FAQS.css';
+import MarqueeComponent from '../../components/MarqueeComponent';
 
 const FAQS = () => {
   return (
+
+    <>        
+    
+    <MarqueeComponent />
+
     <div className="faqs-background-container">
       <div className="faqs-content">
         {/* Título centrado y en mayúsculas */}
+
         <Typography variant="h3" className="faq-title">
           Preguntas frecuentes
         </Typography>
@@ -94,6 +101,7 @@ const FAQS = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

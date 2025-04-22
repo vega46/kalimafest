@@ -5,7 +5,7 @@
   background-color: #deeee7;
   color: #4d96ff;
   margin-top: 10.9vh;
-  height: 8vh;
+  height: 7vh;
   position: relative;
 }
 
@@ -16,7 +16,7 @@
   background-color: #deeee7;
   color: #4d96ff;
   margin-top: 1vh;
-  height: 8vh;
+  height: 7vh;
   position: relative;
 }
 
@@ -44,7 +44,7 @@
   font-size: 2rem; /* Escalable en todos los dispositivos */
   font-weight: 600;
   margin-left: 1rem;
-  line-height: 8vh; /* Asegura que el texto ocupe el centro de la barra */
+  line-height: 7vh; /* Asegura que el texto ocupe el centro de la barra */
   align-items: center; /* Centra el contenido verticalmente */
 }
 

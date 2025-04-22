@@ -23,7 +23,6 @@
   display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  height: 100vh; /* Ocupa toda la altura de la ventana */
   width: 100vw; /* Ocupa todo el ancho */
 }
 
@@ -52,14 +51,6 @@
 .fade-in {
   opacity: 1;
   transform: translateY(0); /* Retorna a su posición original */
-}
-
-
-
-/* Estilo general del contenedor de la grid */
-.artist-images-container {
-  max-width: 1200px; /* Limita el ancho máximo del grid */
-  padding: 20px;
 }
 
 
@@ -97,7 +88,7 @@
   .artist-lineup {
     height: auto;
     object-fit: cover;
-    margin-top: 22vh;
+    margin-top: 18.7vh;
   }
 
   .artist-images-container {
@@ -108,12 +99,12 @@
 
   .artist-title {
     font-size: 2rem;
-    margin-top: 22vh;
+    margin-top: 12vh;
   }
 
   .artist-images-grid {
     display: grid;
-    gap: 16px;
+    gap: 1.1rem;
     margin-top: 5vh;
 
   }
@@ -122,6 +113,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .artists-grid-wrapper {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 80vh; /* Ocupa toda la altura de la ventana */
+    width: 100vw; /* Ocupa todo el ancho */
   }
   
 
