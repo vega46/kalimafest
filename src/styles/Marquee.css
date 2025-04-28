@@ -4,9 +4,20 @@
   white-space: nowrap;
   background-color: #deeee7;
   color: #4d96ff;
-  margin-top: 10.9vh;
-  border: #4d96ff 1px;
-  height: 10vh;
+  margin-top: 15.9vh;
+  height: 12vh;
+  position: relative;
+}
+
+.marquee-container2 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #deeee7;
+  color: #4d96ff;
+  margin-top: 3vh;
+  margin-bottom: 11vh;
+  height: 12vh;
   position: relative;
 }
 
@@ -15,15 +26,9 @@
   align-items: center; /* Centra el contenido verticalmente */
   animation: scroll 200s linear infinite;
   width: max-content; /* Esto es importante para que el contenido no "salte" */
+  height: 100%;
 }
 
-.marquee-text-wrapper2 {
-  display: flex;
-  animation: scroll 300s linear infinite;
-  gap: 0;
-  width: max-content;
-  align-items: center; /* Centra el contenido verticalmente */
-}
 
 .marquee-text-wrapper .marquee-text {
   flex-shrink: 0;
@@ -31,15 +36,19 @@
 
 .marquee-text {
   display: inline-flex;
-  font-size: 2rem; /* Escalable en todos los dispositivos */
+  font-size: 1.5rem; /* Escalable en todos los dispositivos */
   font-weight: 600;
-  line-height: 8vh; /* Asegura que el texto ocupe el centro de la barra */
+  margin-left: 1rem;
+  line-height: 12vh; /* Asegura que el texto ocupe el centro de la barra */
   align-items: center; /* Centra el contenido verticalmente */
 }
-
-.hosted-image {
-  width: auto;
-  height: 3vh;
+.marquee-text2 {
+  display: inline-flex;
+  font-size: 1.5rem; /* Escalable en todos los dispositivos */
+  font-weight: 600;
+  margin-left: 1rem;
+  line-height: 12vh; /* Asegura que el texto ocupe el centro de la barra */
+  align-items: center; /* Centra el contenido verticalmente */
 }
 
 /* Animación responsiva */
@@ -52,28 +61,34 @@
   }
 }
 
-/* Media queries para diferentes pantallas */
-
 /* Móviles estándar */
 @media (max-width: 480px) {
   .marquee-container {
-    height: 4vh;
+    height: 9vh !important;
+    margin-top: 10.9vh;
+  }
+
+  .marquee-container2 {
+    height: 9vh;
+    margin-top: 0vh;
+    margin-bottom: 5vh;
   }
 
   .marquee-text {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Escalable en todos los dispositivos */
+    line-height:  11vh !important; /* Asegura que el texto ocupe el centro de la barra */
   }
 
-  .hosted-image {
-    height: 3vh;
-    width: 10vw;
+  .marquee-text2 {
+    font-size: 1.5rem !important; /* Escalable en todos los dispositivos */
+    line-height:  11vh !important; /* Asegura que el texto ocupe el centro de la barra */
   }
 }
 
 /* Móviles grandes y tablets */
 @media (max-width: 768px) {
   .marquee-container {
-    height: 7vh;
+    height: 8vh;
   }
 
   .marquee-text {
@@ -83,26 +98,17 @@
   .hosted-image {
     height: 4.5vh;
     width: 14.8vw;
+    margin-bottom: 0.4vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
   }
 
   .hosted-image2 {
     height: 3.2vh;
     width: 19vw;
-    margin-right: 1rem;
-  }
+    margin-left: 1vw;
+    margin-right: 1vw;
+   }
 }
 
-/* Ordenadores */
-@media (min-width: 1024px) {
-  .marquee-container {
-    height: 10vh;
-  }
 
-  .marquee-text {
-    font-size: 2.2rem;
-  }
-
-  .hosted-image {
-    height: 5vh;
-  }
-}

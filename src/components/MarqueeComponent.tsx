@@ -1,7 +1,7 @@
 import logo from "../assets/logos/logo.png";
 import carioca from "../assets/logos/carioca.png";
 import antique from "../assets/logos/antique.png";
-import "../styles/Marquee2.css";
+import "../styles/Marquee.css";
 
 const MarqueeComponent = () => {
   return (

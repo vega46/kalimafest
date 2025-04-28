@@ -4,7 +4,7 @@ import Artist from "../../assets/artistas/Artist.png";
 import MapComponent from "../../components/MapComponent";
 import MarqueeComponent from "../../components/MarqueeComponent";import MarqueeComponent2 from "../../components/MarqueeComponent2";
 
-import { Artists } from "../../components/ArtistComponent2";
+import { Artists } from "../../components/ArtistComponent";
 import { TicketsComponent } from "../../components/TicketsComponent";
 import { PartnerComponent } from "../../components/PartnerComponent";
 

@@ -1,96 +1,167 @@
-.artist-name {
-  color: #4d96ff; /* Cambié el texto a azul */
-  font-size: 3rem; /* Aumenta el tamaño de la fuente */
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px;
-  text-align: center;
+.artist-lineup {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  align-items: center;     
+  justify-content: center; 
+  width: 50%;             
+  margin: 0 auto;          
+  padding: 0;      
+  top: 0; 
+  height: auto;
+  object-fit: cover;
+  margin-top: -62vh;
 }
 
-.artist-names-container {
-  display: grid;
-  gap: 20px;
-  padding: 20px;
-  justify-items: center; /* Centra los nombres en cada celda */
+.artist-image-container {
+  padding-left: 1rem !important;
+  padding-right: 2rem !important;
+  width: auto !important;
 }
-
 .artist-title {
   text-align: center;
-  color: #4d96ff; /* Cambié el color a azul */
-  font-size: 3rem; /* Aumenta el tamaño de fuente */
+  color: white;
+  font-size: 2.5rem; 
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
-  margin: 20px 0; /* Espaciado arriba y abajo */
+  margin-top: 60vh ;
 }
 
-.artist-name:hover {
-  transition: transform 0.3s ease-in-out;
-  transform: scale(1.1);
-}
-
-.blurred {
-  filter: blur(15px);
-  color: #4d96ff; /* Cambié el color a azul */
-}
-
-.artist-images-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Siempre 3 imágenes por fila */
-  gap: 40px;
-  justify-content: center;
-  padding: 20px;
-}
-
-.artist-card {
-  position: relative;
-  text-align: center;
-  background: #4d96ff; /* Cambié el fondo a azul */
-  border-radius: 10px;
-  width: 320px;
-  padding-bottom: 10px;
-  z-index: 1; /* Encima de la sombra */
-}
-
-.artist-images-container {
+/* Envuelve todo el grid y lo centra en la pantalla */
+.artists-grid-wrapper {
   display: flex;
-  justify-content: center; /* Centra el grid en la pantalla */
-  width: 100%;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  width: 100vw; /* Ocupa todo el ancho */
+  margin-top: 15vh ;
 }
 
 .artist-image {
-  width: 100%;
-  height: 350px; /* Altura fija para uniformidad */
-  object-fit: cover; /* Ajusta la imagen sin deformarla */
-  border-radius: 10px;
+  width: 23vw; /* Ajusta el tamaño */
+  height: auto;
+  object-fit: cover; /* Asegura proporción */
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out; 
+  margin-bottom: 3rem;
 }
 
 .artist-image:hover {
   transform: scale(1.1);
 }
 
-.artist-name2 {
-  color: white; /* Cambié el texto a blanco */
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px;
+
+/* Clase inicial para ocultar las imágenes */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Desplazamiento significativo hacia abajo */
+  transition: opacity 3s ease-in, transform 3s ease-in; /* Incrementamos la duración a 3 segundos */
 }
 
-.artist-shadow {
-  position: absolute;
-  top: 10px; /* Desplaza la sombra */
-  left: 10px;
-  width: 300px;
-  height: 500px;
-  background-color: #4d96ff; /* Cambié el fondo a azul */
-  border-radius: 8px;
-  z-index: 0; /* Debajo de la tarjeta */
+/* Clase que se aplica cuando el elemento es visible */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0); /* Retorna a su posición original */
+}
+
+
+/* Ajuste para pantallas medianas */
+@media (max-width: 768px) {
+
+  .artist-lineup {
+    height: auto;
+    width: 50%;             
+    object-fit: cover;
+    margin-top: 16vh !important;
+  }
+
+  .artist-title {
+    font-size: 2rem;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+  }
+
+  .artists-grid-wrapper {
+    width: 100vw;
+    margin-top: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .artist-images-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes bajen a la siguiente fila */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 !important;
+    gap: 1rem; /* Espacio entre imágenes */
+
+  }
+
+  .artist-image-container {
+    width: 45vw !important; /* Cada contenedor ocupa aproximadamente la mitad */
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important; /* Elimina relleno */
+  }
+
+  .artist-image {
+    width: 100% !important; /* Imagen ocupa todo el contenedor */
+    height: auto !important;
+    object-fit: cover;
+  }
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 480px) {
+
+  .artist-lineup {
+    height: auto;
+    width: 100%;             
+    object-fit: cover;
+    margin-top: 16vh !important;
+  }
+
+  .artist-title {
+    font-size: 2rem;
+    margin-top: 17vh;
+    text-align: center;
+    margin-bottom: 8vh;
+  }
+
+  .artists-grid-wrapper {
+    width: 100vw;
+    margin-top: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .artist-images-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes bajen a la siguiente fila */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 !important;
+    gap: 1rem; /* Espacio entre imágenes */
+
+  }
+
+  .artist-image-container {
+    width: 45vw !important; /* Cada contenedor ocupa aproximadamente la mitad */
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important; /* Elimina relleno */
+  }
+
+  .artist-image {
+    width: 100% !important; /* Imagen ocupa todo el contenedor */
+    height: auto !important;
+    object-fit: cover;
+  }
 }

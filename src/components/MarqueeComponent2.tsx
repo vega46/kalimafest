@@ -1,5 +1,5 @@
 
-import "../styles/Marquee2.css";
+import "../styles/Marquee.css";
 
 const MarqueeComponent2 = () => {
   return (
