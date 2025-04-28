@@ -55,7 +55,7 @@ const FAQS = () => {
           <br />
           Si necesitas cambiar el nombre en tu entrada, puedes hacerlo a través del siguiente enlace:
           <br />
-          👉 <a href="#">Link para cambio de nombre</a>
+          👉 <a href="https://www.fourvenues.com/es/cambio">Link para cambio de nombre</a>
         </>
       ),
     },
@@ -69,7 +69,7 @@ const FAQS = () => {
           <br />
           Esta pulsera se podrá comprar en taquilla o a través del siguiente enlace:
           <br />
-          👉 <a href="#">Link para compra de pulsera de reacceso</a>
+          👉 <a href="https://www.fourvenues.com/kalima-fest/9O9L">Link para compra de pulsera de reacceso</a>
         </>
       ),
     },

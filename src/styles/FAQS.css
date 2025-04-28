@@ -88,12 +88,12 @@ a {
 @media (max-width: 480px) {
   .faq-title {
     font-size: 2rem !important;
-    margin-top: 23vh !important; /* Separa el título de la parte superior */
+    margin-top: 28vh !important; 
   }
 
   .faq-accordion-container {
     padding: 1rem;
-    margin-top: 14vh;
+    margin-top: 6vh;
     margin-bottom: 7vh;
     width: 99%; 
   }

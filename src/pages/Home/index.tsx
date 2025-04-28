@@ -58,35 +58,47 @@ const artists = [
   },
   {
     image: POPI,
-    url: "",
+    url: "https://www.instagram.com/djpopi_/",
   },
   {
     image: JOANCORTES,
-    url: "",
+    url: "https://www.instagram.com/joancortessss/",
   },
   {
     image: BATAPOST,
-    url: "",
+    url: "https://www.instagram.com/batanerox/",
   },
   {
     image: SOTEPOST,
-    url: "",
+    url: "https://www.instagram.com/sote.dj/",
   },
   {
     image: DANIBM,
-    url: "",
+    url: "https://www.instagram.com/danibm____/",
   },
   {
     image: ESCANEZ,
-    url: "",
+    url: "https://www.instagram.com/amtonioescanezz/",
   },
   {
     image: CHOKOLATE,
-    url: "",
+    url: "https://www.instagram.com/chokolatedj/?hl=es",
   },
   {
     image: SERRATO,
-    url: "",
+    url: "https://www.instagram.com/prodbyserrato/?hl=es",
+  },
+  {
+    image: MIKELDASS,
+    url: "https://www.instagram.com/mikel.dass/?hl=es",
+  },
+  {
+    image: KRATOS,
+    url: "https://www.instagram.com/kratooosss_/?hl=es",
+  },
+  {
+    image: PAULAGARCIA,
+    url: "https://www.instagram.com/paulagarcia.8/?hl=es",
   },
 ];
 
