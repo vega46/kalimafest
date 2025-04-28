@@ -20,7 +20,7 @@ const theme = createTheme({
           },
           "&.Mui-selected .MuiBottomNavigationAction-label": {
             fontSize: "1rem !important", // Mantiene el mismo tamaño al seleccionar
-            color: "#ff8e12", // Cambia solo el color
+            color: "#173968", // Cambia solo el color
           },
         },
       },

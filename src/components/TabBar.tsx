@@ -18,9 +18,9 @@ import "../styles/TabBar.css";
 export const TabBar = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [value, setValue] = useState(location.pathname);
+  const [value, setValue] = useState("/home"); // Asegura que comience seleccionado
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 480px)");
   const drawerRef = useRef(null);
 
   useEffect(() => {
@@ -35,9 +35,32 @@ export const TabBar = () => {
   }, []);
 
   useEffect(() => {
-    setValue(location.pathname);
-  }, [location.pathname]);
-
+    const sectionIds = ["home", "lineup", "tickets", "mapa", "terminos"];
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Al menos el 50% visible
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          if (id) {
+            setValue("/" + id); // Cambia el tab activo
+          }
+        }
+      });
+    }, observerOptions);
+  
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  
+    return () => observer.disconnect();
+  }, []);
+  
   const handleChange = (_: any, newValue: string) => {
     setValue(newValue);
     setDrawerOpen(false);

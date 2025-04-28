@@ -43,9 +43,12 @@ export const Artists = ({ artists }: ArtistsProps) => {
       <div className="artists-grid-wrapper">
         <Grid2
           container
-          spacing={1}
           justifyContent="center"
           className="artist-images-container"
+        
+          spacing={0} // Espaciado entre los elementos
+          style={{ paddingLeft: 0, paddingRight: 0 }} // ✅ Quita el padding lateral
+
         >
           {artists.map((artist, index) =>
             artist.image ? (

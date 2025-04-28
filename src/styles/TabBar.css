@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: 2000;
-    background-color: #4d96ff;
+    background-color: #4d96ff !important;
     box-shadow: none;
     overflow: visible;
     border-radius: 0;
@@ -51,6 +51,7 @@
     padding: 0 4px !important;
     min-width: auto !important;
     flex: none !important;
+    background-color: #4d96ff !important;
   }
 
   .MuiListItem-root{
@@ -65,12 +66,13 @@
   .tabbar-bottom-nav {
     flex-grow: 1;
     display: flex;
-    justify-content: right;
-    background-color: #4d96ff;
+    justify-content: right !important;
+    background-color: #4d96ff !important;
     font-family: "Exo Black", sans-serif;
-    min-height: 8vh;
+    height: 6.5vh;
     width: auto;
     align-items: flex-end;
+    gap: 1rem
 
   }
 
@@ -123,7 +125,7 @@
       }
 
   /* MEDIA QUERY para ajustes en móviles pequeños */
-  @media (max-width: 450px) {
+  @media (max-width: 480px) {
     .tabbar-logo {
         height: 5vh;
     }
@@ -148,26 +150,3 @@
   }
   
 
-  @media (max-width: 340px) {
-    .tabbar-logo {
-        height: 4vh;
-    }
-  
-    .tabbar-drawer {
-        height: 100vh;
-        padding: 1rem;
-      }
-  
-    .tabbar-drawer-text {
-      font-size: 1.4rem;
-    }
-
-    .tabbar-container {
-        padding: 2.4vh 4vw;
-      }
-
-      .tabbar-menu-button {
-        margin-right: 2.3rem !important;
-      }
-      
-  }

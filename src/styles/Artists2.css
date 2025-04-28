@@ -1,21 +1,29 @@
-
 .artist-lineup {
   display: flex;
   align-items: center;     
   justify-content: center; 
-  width: 100%;             
+  width: 50%;             
   margin: 0 auto;          
   padding: 0;      
   top: 0; 
+  height: auto;
+  object-fit: cover;
+  margin-top: -62vh;
 }
 
+.artist-image-container {
+  padding-left: 1rem !important;
+  padding-right: 2rem !important;
+  width: auto !important;
+}
 .artist-title {
   text-align: center;
   color: white;
-  font-size: 5rem; 
+  font-size: 2.5rem; 
   font-weight: bold;
   font-style: normal;
   text-transform: uppercase;
+  margin-top: 60vh ;
 }
 
 /* Envuelve todo el grid y lo centra en la pantalla */
@@ -24,15 +32,16 @@
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
   width: 100vw; /* Ocupa todo el ancho */
+  margin-top: 15vh ;
 }
 
 .artist-image {
-  width: 130%; /* Ajusta el tamaño */
+  width: 23vw; /* Ajusta el tamaño */
   height: auto;
   object-fit: cover; /* Asegura proporción */
-  border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out; /* Sigue aplicando efectos hover */
+  transition: transform 0.5s ease-in-out; 
+  margin-bottom: 3rem;
 }
 
 .artist-image:hover {
@@ -57,28 +66,51 @@
 /* Ajuste para pantallas medianas */
 @media (max-width: 768px) {
 
-  .artist-images-container,
-  .artist-images-grid {
-    padding: 0; /* Elimina relleno */
-    border: none; /* Elimina bordes */
+  .artist-lineup {
+    height: auto;
+    width: 50%;             
+    object-fit: cover;
+    margin-top: 16vh !important;
   }
 
   .artist-title {
     font-size: 2rem;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
   }
 
-  .artist-images-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+  .artists-grid-wrapper {
+    width: 100vw;
+    margin-top: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .artist-lineup {
-    height: auto;
-    object-fit: cover;
+  .artist-images-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes bajen a la siguiente fila */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 !important;
+    gap: 1rem; /* Espacio entre imágenes */
+
+  }
+
+  .artist-image-container {
+    width: 45vw !important; /* Cada contenedor ocupa aproximadamente la mitad */
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important; /* Elimina relleno */
   }
 
   .artist-image {
-    width: 100%; /* Asegura que la imagen ocupe el 100% */
-    height: auto;
+    width: 100% !important; /* Imagen ocupa todo el contenedor */
+    height: auto !important;
+    object-fit: cover;
   }
 }
 
@@ -87,41 +119,49 @@
 
   .artist-lineup {
     height: auto;
+    width: 100%;             
     object-fit: cover;
-    margin-top: 18.7vh;
-  }
-
-  .artist-images-container {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    margin-top: 16vh !important;
   }
 
   .artist-title {
     font-size: 2rem;
-    margin-top: 12vh;
-  }
-
-  .artist-images-grid {
-    display: grid;
-    gap: 1.1rem;
-    margin-top: 5vh;
-
-  }
-
-  .artist-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    margin-top: 17vh;
+    text-align: center;
+    margin-bottom: 8vh;
   }
 
   .artists-grid-wrapper {
+    width: 100vw;
+    margin-top: 0 !important;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    height: 80vh; /* Ocupa toda la altura de la ventana */
-    width: 100vw; /* Ocupa todo el ancho */
+    justify-content: center;
+    align-items: center;
   }
-  
 
+  .artist-images-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes bajen a la siguiente fila */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 !important;
+    gap: 1rem; /* Espacio entre imágenes */
+
+  }
+
+  .artist-image-container {
+    width: 45vw !important; /* Cada contenedor ocupa aproximadamente la mitad */
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important; /* Elimina relleno */
+  }
+
+  .artist-image {
+    width: 100% !important; /* Imagen ocupa todo el contenedor */
+    height: auto !important;
+    object-fit: cover;
+  }
 }

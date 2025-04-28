@@ -24,28 +24,18 @@ body {
   top: 0; /* Elimina cualquier margen */
   padding: 0; /* Elimina cualquier relleno */
   height: auto;
+  object-fit: cover !important;
   min-height: 100%;
-  background: url("../assets/fondoweb.png") no-repeat center top;
+  background: url("../assets/fondop2.png") no-repeat center top;
   position: absolute; /* Asegura que se expanda sin restricciones */
   z-index: -1; /* Asegura que esté detrás del contenido */
+  margin-top: 90vh;
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  html {
-    font-size: 14px; /* 1rem = 14px para pantallas pequeñas */
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 12px; /* 1rem = 12px para pantallas muy pequeñas */
-  }
-}
 
 a {
   border: none;
@@ -53,8 +43,6 @@ a {
   border: none; /* Elimina cualquier borde */
   padding: 0; /* Elimina cualquier relleno */
 }
-
-
 
 @font-face {
   font-family: "Exo Black";
@@ -106,10 +94,8 @@ a {
   justify-content: center; /* Centra las imágenes horizontalmente */
   align-items: center; /* Centra las imágenes verticalmente */
   flex-wrap: nowrap; /* Asegura que todo esté en una fila única */
-  height: 150px; /* Ajusta la altura del contenedor según sea necesario */
-  gap: 7px; /* Añade espacio entre los logos */
-  padding: 10px; /* Espaciado interno para centrar correctamente */
-  overflow: hidden; /* Evita el scroll horizontal y oculta contenido extra */
+  height: 40vh; /* Ajusta la altura del contenedor según sea necesario */
+  overflow: hidden;
 }
 
 .logos-container::before {
@@ -121,36 +107,33 @@ a {
   height: 100%;
   background: url("../assets/fondor.png") no-repeat center bottom;
   z-index: -1; /* Ubica el fondo detrás del contenido */
+  object-fit: cover !important;
 }
 
 .logos-row {
   display: flex; /* Cada fila es un flex row */
   justify-content: center; /* Centra los elementos dentro del row */
   align-items: center; /* Centra verticalmente los elementos */
-  gap: 10px; /* Espaciado entre los logos dentro de cada fila */
+  gap: 3rem; /* Espaciado entre los logos dentro de cada fila */
+  margin-top: -8vh;
 }
 
 .partner {
+  width: 10vw; /* Ajusta el tamaño de los logos */
+  height: auto;
+  z-index: 1;
+  margin-right: 7vw; /* Margen derecho para separar */
+}
+
+.partner2 {
   width: 20vw; /* Ajusta el tamaño de los logos */
   height: auto;
   z-index: 1; /* Asegura que los logos estén encima del fondo */
 }
 
-.partner2 {
-  width: 30vw; /* Ajusta el tamaño de los logos */
-  height: auto;
-  z-index: 1; /* Asegura que los logos estén encima del fondo */
-}
-
-.partner {
-  margin-right: 8vw; /* Margen derecho para separar */
-}
-
 .partner:last-child {
   margin-right: 0; /* Elimina el margen derecho del último elemento */
 }
-
-
 
 .logo {
   width: 165px;
@@ -159,12 +142,114 @@ a {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+
+  html {
+    font-size: 12px;
+  }
+
+  .background-container {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    background: url("../assets/fondoweb.png") no-repeat center top;
+    position: absolute; /* Asegura que se expanda sin restricciones */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+    margin-top: 2rem;
+  }
+
   .logos-container {
-    flex-direction: column;
+    height: 20vh;
+    gap: 7px;
+  }
+
+  .logos-container::before {
+    width: 100%;
+    height: 100%;
+    background: url("../assets/fondor.png") no-repeat center bottom;
+    z-index: -1;
+  }
+
+  .logos-row {
+    gap: 10px;
+  }
+
+  .partner {
+    width: 22vw;
+    height: auto;
+    margin-right: 11vw;
+    margin-top: -3vh;
+
+  }
+
+  .partner:last-child {
+    margin-right: 0;
+  }
+
+  .partner2 {
+    width: 30vw;
+    height: auto;
+    z-index: 1;
+    margin-top: 2.5vh;
   }
 
   .logo {
-    width: 80px;
+    width: 165px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 14px; /* 1rem = 14px para pantallas pequeñas */
+  }
+
+  .background-container {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    background: url("../assets/fondoweb.png") no-repeat center top;
+    position: absolute; /* Asegura que se expanda sin restricciones */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+    margin-top: 10vh;
+  }
+
+  .logos-container {
+    height: 20vh;
+    gap: 7px;
+  }
+
+  .logos-container::before {
+    width: 100%;
+    height: 100%;
+    background: url("../assets/fondor.png") no-repeat center bottom;
+    z-index: -1;
+  }
+
+  .logos-row {
+    gap: 0rem;
+  }
+
+  .partner {
+    width: 17vw;
+    height: auto;
+    margin-top: -3vh;
+  }
+
+  .partner:last-child {
+    margin-right: 0;
+  }
+
+  .partner2 {
+    width: 30vw;
+    height: auto;
+    z-index: 1;
+    margin-top: -2vh;
+  }
+
+  .logo {
+    width: 165px;
+    height: auto;
   }
 }

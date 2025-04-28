@@ -34,6 +34,7 @@
     "i18next-browser-languagedetector": "^7.0.1",
     "leaflet": "^1.9.4",
     "lineicons-react": "^2.0.0",
+    "maplibre-gl": "^5.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2.0",
