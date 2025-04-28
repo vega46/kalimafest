@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "./static/css/main.fe437ad2.css",
+    "main.js": "./static/js/main.d9a51ef5.js",
+    "static/js/496.13504223.chunk.js": "./static/js/496.13504223.chunk.js",
+    "static/media/CASAPEPA.png": "./static/media/CASAPEPA.e3fe5ae0d44ee4bda02b.png",
+    "static/media/DISOBEY_POST.png": "./static/media/DISOBEY_POST.6fb140b2880e9309c3c4.png",
+    "static/media/BATAPOST.png": "./static/media/BATAPOST.7d00de4580bb7fff897c.png",
+    "static/media/LUCIA REINA.png": "./static/media/LUCIA REINA.340f54eaa2b917d69990.png",
+    "static/media/POPI.png": "./static/media/POPI.7c398cea571889989234.png",
+    "static/media/CHOKOLATE.png": "./static/media/CHOKOLATE.9b055bc9e28a9742c305.png",
+    "static/media/KRATOS.png": "./static/media/KRATOS.8cc2de99a3a7e2fbb3a5.png",
+    "static/media/VERAGRV_POST.png": "./static/media/VERAGRV_POST.805d9ed43e02a4cfc7b7.png",
+    "static/media/MVRK_POST.png": "./static/media/MVRK_POST.7e48f4e414b53efe2dd5.png",
+    "static/media/ESCANEZ.png": "./static/media/ESCANEZ.fc33005168054a2bb966.png",
+    "static/media/SERRATO.png": "./static/media/SERRATO.5c34905b5b12c17a5228.png",
+    "static/media/ELBUGG_POST.png": "./static/media/ELBUGG_POST.4d41f566da137a6c432a.png",
+    "static/media/JOANCORTES.png": "./static/media/JOANCORTES.04b5eaa8d263e8c0cedd.png",
+    "static/media/PAULAGARCIA.png": "./static/media/PAULAGARCIA.9715de139c15b322a342.png",
+    "static/media/DANIBM.png": "./static/media/DANIBM.bd6a1fd9a26d58dff6f7.png",
+    "static/media/SOTEPOST.png": "./static/media/SOTEPOST.d0a4a56b99d5953cd1f8.png",
+    "static/media/DVALENTINO_POST.png": "./static/media/DVALENTINO_POST.8fab1ce09032fcb22ed4.png",
+    "static/media/MIKELDASS.png": "./static/media/MIKELDASS.7ae693a971008d32afac.png",
+    "static/media/logo.png": "./static/media/logo.e072a709212b6bd2d12b.png",
+    "static/media/Artist.png": "./static/media/Artist.339bca9ba56be906dcac.png",
+    "static/media/Exo-Black.otf": "./static/media/Exo-Black.22e17cc2371bb4fd21ab.otf",
+    "static/media/carioca.png": "./static/media/carioca.6dad691a548316532684.png",
+    "static/media/antique.png": "./static/media/antique.56ddf89767c20e5a8bdc.png",
+    "static/media/fondop2.png": "./static/media/fondop2.3dc53054a6c9478b44af.png",
+    "static/media/fondoweb.png": "./static/media/fondoweb.16436520046fda36c67c.png",
+    "index.html": "./index.html",
+    "main.fe437ad2.css.map": "./static/css/main.fe437ad2.css.map",
+    "main.d9a51ef5.js.map": "./static/js/main.d9a51ef5.js.map",
+    "496.13504223.chunk.js.map": "./static/js/496.13504223.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe437ad2.css",
+    "static/js/main.d9a51ef5.js"
+  ]
+}
